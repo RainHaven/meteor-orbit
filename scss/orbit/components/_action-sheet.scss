@@ -1,0 +1,77 @@
+.action-sheet {
+  box-shadow: none;
+}
+.action-sheet.is-active {
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.25);
+}
+
+@include breakpoint(medium) {
+
+  .action-sheet.right::before, .action-sheet.right::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    margin-left: -10px;
+    margin-top: -20px;
+  }
+  .action-sheet.right::before, .action-sheet.right::after {
+    top: 20%;
+    bottom: auto;
+    border-left: 0;
+    border-right: 10px solid white;
+  }
+
+  .action-sheet.right::before {
+    top: 20%;
+    left: -2px;
+    border-right-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .action-sheet.right {
+    transform: translateX(25%) translateY(100%);
+  }
+  .action-sheet.is-active.right {
+    transform: translateX(25%) translateY(80%);
+  }
+
+
+  .action-sheet.left::before, .action-sheet.left::after {
+    content: '';
+    position: absolute;
+    left: auto;
+    right: 0;
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    margin-right: -10px;
+    margin-top: -20px;
+  }
+  .action-sheet.left::before, .action-sheet.left::after {
+    top: 20%;
+    bottom: auto;
+    border-right: 0;
+    border-left: 10px solid white;
+  }
+
+  .action-sheet.left::before {
+    top: 20%;
+    left: auto;
+    right: -2px;
+    border-left-color: rgba(0, 0, 0, 0.15);
+  }
+
+
+  .action-sheet.left {
+    transform: translateX(-125%) translateY(100%);
+  }
+  .action-sheet.is-active.left {
+    transform: translateX(-125%) translateY(80%);
+  }
+}

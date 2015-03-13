@@ -1,0 +1,15 @@
+<template name="OffCanvasReveal">
+  <a href="#" class="reveal-off-canvas {{class}}" id="{{id}}">{{text}}</a>
+</template>
+
+<template name="OffCanvasDismiss">
+  <a href="#" class="dismiss-off-canvas {{class}}" id="{{id}}">{{text}}</a>
+</template>
+
+<template name="OffCanvas">
+  <div class="detached off-canvas hide-for-print {{revealOffCanvasClass}}" ng-class="{'is-active': active}" ng-transclude="" id="example-canvas-left" position="left" zf-closable="offcanvas">
+    <div class="grid-content ng-scope">
+      {{> UI.contentBlock}}
+    </div>
+  </div>
+</template>

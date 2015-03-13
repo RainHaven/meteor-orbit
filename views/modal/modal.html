@@ -1,0 +1,18 @@
+<template name="Modal">
+  <a class="reveal-modal {{class}}" id="{{id}}">{{text}}</a>
+</template>
+
+<template name="_Modal">
+  <div class="modal-overlay hidden">
+    <aside class="modal is-active {{modalClass}}">
+      {{> UI.dynamic template=this.modal data=getParentData}}
+    </aside>
+  </div>
+</template>
+
+
+<template name="DismissModal">
+  <a class="dismiss-modal {{class}}" id="{{id}}">{{text}}</a>
+</template>
+
+

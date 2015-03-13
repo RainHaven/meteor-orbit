@@ -1,0 +1,14 @@
+<template name="ActionSheet">
+  {{#with actionSheetData}}
+  <div class="action-sheet-container is-active">
+    <a href="#" class="action-sheet-button {{class}}" id="{{id}}">
+      {{> UI.contentBlock}}
+    </a>
+    <div class="action-sheet bottom {{isActive}} {{sheetClass}}" id="{{actionSheetId}}">
+      {{> Template.dynamic template=sheetTemplate data=getParentData}}
+    </div>
+  </div>
+  {{/with}}
+</template>
+
+

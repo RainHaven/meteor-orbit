@@ -1,0 +1,8 @@
+<template name="SplitView">
+  <div class="{{listViewClass}}">
+    {{> yield}}
+  </div>
+  <div class="{{detailViewClass}} panel panel-right orbit-detail-view {{isActiveDetailPanel}} {{isOffScreenRight}}">
+    {{> Template.dynamic template=detailTemplate}}
+  </div>
+</template>

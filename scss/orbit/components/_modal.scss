@@ -1,0 +1,54 @@
+.modal {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.2s;
+  transform: scale(1) translate3d(0, 0, 0);
+
+  &.is-active {
+    height: 100vh !important;
+  }
+
+  &.full {
+    height: 100vh;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+.modal-overlay {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.2s;
+}
+
+.modal-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+
+  > .modal {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+
+  }
+}
+
+@include breakpoint(medium) {
+  .modal-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+
+    > .modal {
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.9);
+
+    }
+  }
+}
+
+
+
+
